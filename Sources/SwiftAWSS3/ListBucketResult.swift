@@ -36,7 +36,7 @@ public struct ListBucketResult {
 		self.prefix = node.child(named: "Prefix")?.childString
 		self.marker = node.child(named: "Marker")?.childString
 		let (contentsNodes, _) = node.children(named: "Contents")
-		self.contents = contentsNodes.flatMap({return Content(xml: $0)})
+		self.contents = contentsNodes.compactMap { Content(xml: $0) }
 	}
 	
 	public struct Content {
@@ -63,7 +63,7 @@ public struct ListBucketResult {
 				else {
 					return nil
 			}
-			let name:String = keyChild.childString ?? ""
+			let name:String = keyChild.childString
 			self.key = name
 			self.size = size
 			lastModified = (xml.child(named: "LastModified")?.childString).flatMap({return Content.lastModifiedDateFormatter.date(from:$0)})
