@@ -9,12 +9,11 @@ let package = Package(
 		],
 	dependencies:[
 		.package(url:"https://github.com/CryptonautAI/SwiftAWSSignatureV4.git", from:"1.0.3")
-		,.package(url:"https://github.com/benspratling4/SwiftPatterns.git", from:"2.0.0")
 	],
 	targets:[
 		.target(
 			name: "SwiftAWSS3",
-			dependencies: ["SwiftAWSSignatureV4", "SwiftPatterns"]),
+			dependencies: ["SwiftAWSSignatureV4"]),
 	  .testTarget(
 		name: "SwiftAWSS3Tests",
 		dependencies: ["SwiftAWSS3"]),

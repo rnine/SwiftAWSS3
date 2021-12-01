@@ -6,21 +6,6 @@
 //
 
 import Foundation
-import SwiftPatterns
-
-
-extension SwiftPatterns.XMLItem {
-	
-	var childString:String? {
-		let stringChildren:[String] = children.flatMap { return $0 as? String }
-		if stringChildren.count == 0 {
-			return nil
-		}
-		return stringChildren.joined()
-	}
-	
-}
-
 
 public struct ListBucketResult {
 	
@@ -41,7 +26,7 @@ public struct ListBucketResult {
 	
 	public init?(xmlData:Data) {
 		//get nodes
-		guard let node = DataToXMLItemFactory(data: xmlData).documentItem?.children.first as? SwiftPatterns.XMLItem else {
+		guard let node = DataToXMLItemFactory(data: xmlData).documentItem?.children.first as? XMLItem else {
 			return nil
 		}
 		if node.name != "ListBucketResult" {
@@ -71,8 +56,8 @@ public struct ListBucketResult {
 			return formatter
 		}()
 		
-		init?(xml:SwiftPatterns.XMLItem) {
-			guard let keyChild:SwiftPatterns.XMLItem = xml.child(named: "Key")
+		init?(xml:XMLItem) {
+			guard let keyChild:XMLItem = xml.child(named: "Key")
 				,let sizeString:String = xml.child(named: "Size")?.childString
 				,let size:Int = Int(sizeString)
 				else {
