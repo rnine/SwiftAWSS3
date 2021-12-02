@@ -69,8 +69,6 @@ public struct AWSBucket {
 		request.httpMethod = "GET"
         request.httpBody = Data()
 
-        print(url)
-
         return request
 	}
 	

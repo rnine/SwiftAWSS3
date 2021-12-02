@@ -6,17 +6,17 @@
         "repositoryURL": "https://github.com/IBM-Swift/BlueCryptor.git",
         "state": {
           "branch": null,
-          "revision": "ee5880e031da4c609f372cf7472476ab51d5dd19",
-          "version": "1.0.200"
+          "revision": "88fc6e132f41ece53e49acc0e4f67b0331c15b90",
+          "version": "2.0.1"
         }
       },
       {
         "package": "SwiftAWSSignatureV4",
-        "repositoryURL": "https://github.com/CryptonautAI/SwiftAWSSignatureV4.git",
+        "repositoryURL": "https://github.com/rnine/SwiftAWSSignatureV4.git",
         "state": {
           "branch": null,
-          "revision": "d8eec99e6c4885fa12b0904e988fefa08f158802",
-          "version": "1.0.3"
+          "revision": "e7433697ac16da7f6c054f815c5802a35da8e117",
+          "version": "1.1.1"
         }
       }
     ]
