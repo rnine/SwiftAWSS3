@@ -8,7 +8,7 @@ let package = Package(
 			targets: ["SwiftAWSS3"]),
 		],
 	dependencies:[
-		.package(url:"https://github.com/CryptonautAI/SwiftAWSSignatureV4.git", from:"1.0.3")
+		.package(url:"https://github.com/rnine/SwiftAWSSignatureV4.git", from:"1.1.0")
 	],
 	targets:[
 		.target(
